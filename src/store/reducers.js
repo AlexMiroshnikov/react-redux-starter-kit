@@ -1,9 +1,12 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
 
+import { reducer as reduxAsyncConnect } from 'redux-connect'
+
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
+    reduxAsyncConnect,
     ...asyncReducers
   })
 }
